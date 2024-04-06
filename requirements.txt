@@ -2,3 +2,7 @@ openai
 langchain
 langchain-openai
 huggingface_hub
+numexpr
+google-search-results
+langchainhub
+weaviate-client
