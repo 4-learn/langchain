@@ -6,3 +6,6 @@ numexpr
 google-search-results
 langchainhub
 weaviate-client
+langchain_community
+bs4
+wikipedia
