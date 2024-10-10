@@ -16,16 +16,14 @@ chunks = splitter.split_documents(documents)
 # 輸出分割後的文本塊數量
 print(f"分割後的文本塊數量: {len(chunks)}")
 
-# 列出每個文本塊的內容
-for idx, chunk in enumerate(chunks, 1):
-    print(f"文本塊 {idx}: {chunk.page_content}")
+# 將所有 chunks 的內容合併為一個大的文本
+all_text = " ".join(chunk.page_content for chunk in chunks)
 
-# 計算所有文本塊中出現頻率最高的前三個詞彙
-word_counter = Counter()
-for chunk in chunks:
-    words = chunk.page_content.split()
-    word_counter.update(words)
+# 分割所有文本並計算詞頻
+words = all_text.split()
+word_counter = Counter(words)
 
+# 找出出現頻率最高的前 10 個詞彙
 most_common_words = word_counter.most_common(10)
 for word, count in most_common_words:
     print(f"詞彙: '{word}', 出現次數: {count}")
