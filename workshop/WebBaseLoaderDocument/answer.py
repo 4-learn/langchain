@@ -17,6 +17,4 @@ loader = WebBaseLoader(WEB_SITE)
 documents = loader.load()
 
 # print
-print(type(documents))
 print(documents)
-
