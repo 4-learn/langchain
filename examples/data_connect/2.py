@@ -12,7 +12,6 @@ docs = WikipediaLoader(query = query_wiki, lang = "en", load_max_docs = 2).load(
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=100,  # 每個段落的字符數
     chunk_overlap=20,  # 段落間的重疊字符數
-    length_function=len,
 )
 
 # 分割文本
